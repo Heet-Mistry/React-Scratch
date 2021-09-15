@@ -1,11 +1,10 @@
-import React from "react";
+import React,{Component} from "react";
+import { withRouter } from "react-router";
 
-const Details = () => {
-  return (
-    <div>
-      <h2>Hello lol</h2>
-    </div>
-  );
-};
+class Details extends Component{
+    render(){
+        return <h2>Hello</h2>
+    }
+}
 
 export default Details;
