@@ -1,17 +1,31 @@
 import React, { StrictMode } from "react";
 import ReactDOM from "react-dom";
-
+import { BrowserRouter as Router, Route ,Switch} from "react-router-dom";
+import Details from "./details";
 import SearchParams from "./SearchParams";
 
 const App = () => {
   return (
     <div>
       <h1>Adopt Me</h1>
-      <StrictMode>
-        <SearchParams />
-      </StrictMode>
+      <Router>
+      <Switch>
+        <Route path="/details/:id">
+          <Details />
+        </Route>
+        <Route path='/'>
+          <SearchParams />
+        </Route>
+      </Switch>
+      </Router>
     </div>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <StrictMode>
+    {" "}
+    <App />{" "}
+  </StrictMode>,
+  document.getElementById("root")
+);
