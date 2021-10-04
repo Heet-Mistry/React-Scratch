@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
 import useBreedList from "./useBreed";
 import breedList from "./useBreed";
 import Results from "./Results";
+
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 
 const SearchParams = () => {
