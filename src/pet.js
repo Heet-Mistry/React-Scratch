@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const Pet = ({ name, animal, breed, id, location, images }) => {
   let hero = "http://pets-images.dev-apis.com/pets/none.jpg";
 

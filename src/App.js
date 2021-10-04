@@ -4,6 +4,17 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Details from "./details";
 import SearchParams from "./SearchParams";
 
+// async function componenentDidMount() {
+//   const res = await fetch(
+//     `http://pets-v2.dev-apis.com/pets?id=1`
+//   );
+
+//   const json_data = await res.json();
+//   console.log(json_data);
+// }
+
+// componenentDidMount();
+
 const App = () => {
   return (
     <div>
@@ -13,6 +24,7 @@ const App = () => {
             <h1>Adopt Me</h1>
           </Link>
         </header>
+
         <Switch>
           <Route path="/details/:id">
             <Details />
@@ -28,8 +40,7 @@ const App = () => {
 
 ReactDOM.render(
   <StrictMode>
-    {" "}
-    <App />{" "}
+    <App />
   </StrictMode>,
   document.getElementById("root")
 );
