@@ -1,8 +1,9 @@
-import React, { StrictMode } from "react";
+import React, { StrictMode ,useState} from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Details from "./details";
 import SearchParams from "./SearchParams";
+import ThemeContext from "./ThemeContext";
 
 // async function componenentDidMount() {
 //   const res = await fetch(
@@ -16,7 +17,15 @@ import SearchParams from "./SearchParams";
 // componenentDidMount();
 
 const App = () => {
+
+  const theme = useState('Dark Blue');
+
   return (
+
+    <ThemeContext.Provider value={theme}>
+
+   
+
     <div>
       <Router>
         <header>
@@ -35,6 +44,7 @@ const App = () => {
         </Switch>
       </Router>
     </div>
+    </ThemeContext.Provider>
   );
 };
 
