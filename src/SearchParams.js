@@ -12,7 +12,7 @@ const SearchParams = () => {
   const [breed, setBreed] = useState("");
   const [breeds, status] = useBreedList(animal);
   const [pets, setPets] = useState([]);
-  const [theme,setTheme] = useContext(ThemeContext);
+  const [theme, setTheme] = useContext(ThemeContext);
 
   useEffect(() => {
     requestPets();
@@ -87,11 +87,10 @@ const SearchParams = () => {
             onBlur={(e) => setTheme(e.target.value)}
           >
             <option value=""></option>
-            <option value='darkblue'>Dark Blue</option>   
+            <option value="darkblue">Dark Blue</option>
             <option value="peru">Peru</option>
-            <option value='chartreuse'>Chartreuse</option>
-            <option value='mediumorchid'>Medium Orhid</option>
-
+            <option value="chartreuse">Chartreuse</option>
+            <option value="mediumorchid">Medium Orhid</option>
           </select>
         </label>
 
