@@ -9,14 +9,12 @@ const Modal = ({ children }) => {
     elRef.current = document.createElement("div");
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     modalRoot.appendChild(elRef.current);
-    return () => modalRoot.removeChild(elRef.current)
-  },[]);
+    return () => modalRoot.removeChild(elRef.current);
+  }, []);
 
-  return createPortal(<div>{children}</div> ,elRef.current)
+  return createPortal(<div>{children}</div>, elRef.current);
 };
 
 export default Modal;
-
-
