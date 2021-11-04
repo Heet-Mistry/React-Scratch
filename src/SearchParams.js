@@ -27,8 +27,11 @@ const SearchParams = () => {
   }
 
   return (
-    <div className="search-params">
+    <div
+    className='my-0 mx-auto w-11/12'
+    >
       <form
+        className='p-10 mb-10 rounded-lg bg-gray-200 shadow-lg flex flex-col justify-center items-center divide-y divide-gray-900'
         onSubmit={(e) => {
           e.preventDefault();
           requestPets();
@@ -37,6 +40,7 @@ const SearchParams = () => {
         <label htmlFor="location">
           Location
           <input
+            className='w-60 my  -10'
             id="location"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
@@ -47,6 +51,7 @@ const SearchParams = () => {
         <label htmlFor="animal">
           Animal
           <select
+            className='w-60 my-10'
             name=""
             id="animal"
             value={animal}
@@ -65,6 +70,7 @@ const SearchParams = () => {
         <label htmlFor="breed">
           Breed
           <select
+            className='w-60 my-10'
             name=""
             id="breed"
             value={breed}
@@ -81,7 +87,9 @@ const SearchParams = () => {
         </label>
 
         <label htmlFor="theme">
+          Theme
           <select
+            className='w-60 my-10'
             value={theme}
             onChange={(e) => setTheme(e.target.value)}
             onBlur={(e) => setTheme(e.target.value)}
