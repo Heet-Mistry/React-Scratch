@@ -40,7 +40,7 @@ const SearchParams = () => {
         <label htmlFor="location">
           Location
           <input
-            className='w-60 my  -10'
+            className='w-60 my-10'
             id="location"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
