@@ -70,7 +70,7 @@ const SearchParams = () => {
         <label className='search-label' htmlFor="breed">
           Breed
           <select
-            className='search-control'
+            className='search-control disabled:opacity-50'
             name=""
             id="breed"
             value={breed}
@@ -89,7 +89,7 @@ const SearchParams = () => {
         <label className='search-label' htmlFor="theme">
           Theme
           <select
-            className='search-control disabled:opacity-50'
+            className='search-control'
             value={theme}
             onChange={(e) => setTheme(e.target.value)}
             onBlur={(e) => setTheme(e.target.value)}
